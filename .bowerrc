@@ -1,0 +1,6 @@
+{
+  "directory": "app/bower_components",
+  "interactive": false,
+  "proxy":"http://www-proxy.us.oracle.com:80",
+  "https-proxy":"http://www-proxy.us.oracle.com:80"
+}
