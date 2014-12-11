@@ -9,16 +9,16 @@
     <div class="col-md-2">
       <!--Sidebar content-->
 
-      Search: <input ng-model="query">
+      Search: <input type="text" ng-model="query" ng-keypress="keyboardevent($event)">
+      <button ng-click="updateworkerlist()">Search</button>
 
     </div>
     <div class="col-md-10">
       <!--Body content-->
 
-      <ul class="phones">
-        <li ng-repeat="phone in phones">
-          {{phone.name}}
-          <p>{{phone.snippet}}</p>
+      <ul class="workers">
+        <li ng-repeat="worker in Workers">
+          <p>First name: {{worker.first_name}}  Last name: {{worker.last_name}} Email:  {{worker.email_address}}   Manager: {{worker.manager_email_address}} </p>
         </li>
       </ul>
 
