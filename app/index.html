@@ -4,21 +4,11 @@
   <script src="js/controllers.js"></script>
 </head>
 <body ng-controller="ArielCtrl">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
-
+      <font face="verdana">
       Search: <input type="text" ng-model="query" ng-keypress="keyboardevent($event)">
       <button ng-click="updateworkerlist()">Search</button>
-
-    </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
       <ul class="workers">
-
-      <table border="2" style="background-color:grey;border-collapse:collapse;border:2px solid black;color:black;width:100%" cellpadding="3" cellspacing="3">
+      <table border="2" style="background-color:lightgray;border-collapse:collapse;border:2px solid black;color:black;width:100%;" cellpadding="3" cellspacing="3">
         <tr>
           <td>First name</td>
           <td>Last Name</td>
@@ -27,16 +17,11 @@
         </tr>
         <tr ng-repeat="worker in Workers" style="background-color:white">
           <td>{{worker.first_name}}</td>
-          <td>{{worker.last_name_name}}</td>
+          <td>{{worker.last_name}}</td>
           <td>{{worker.first_name}}</td>
           <td>{{worker.manager_email_address}} </td>
         </tr>
       </table>
-
       </ul>
-
-    </div>
-  </div>
-</div>
 </body>
 </html>
