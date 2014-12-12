@@ -17,9 +17,22 @@
       <!--Body content-->
 
       <ul class="workers">
-        <li ng-repeat="worker in Workers">
-          <p>First name: {{worker.first_name}}  Last name: {{worker.last_name}} Email:  {{worker.email_address}}   Manager: {{worker.manager_email_address}} </p>
-        </li>
+
+      <table border="2" style="background-color:grey;border-collapse:collapse;border:2px solid black;color:black;width:100%" cellpadding="3" cellspacing="3">
+        <tr>
+          <td>First name</td>
+          <td>Last Name</td>
+          <td>Email Address</td>
+          <td>Manager Email Address</td>
+        </tr>
+        <tr ng-repeat="worker in Workers" style="background-color:white">
+          <td>{{worker.first_name}}</td>
+          <td>{{worker.last_name_name}}</td>
+          <td>{{worker.first_name}}</td>
+          <td>{{worker.manager_email_address}} </td>
+        </tr>
+      </table>
+
       </ul>
 
     </div>
