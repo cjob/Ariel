@@ -14,14 +14,20 @@
           <td>Last Name</td>
           <td>Email Address</td>
           <td>Manager Email Address</td>
+          <td>Directs</td>
         </tr>
         <tr ng-repeat="worker in Workers" style="background-color:white">
           <td>{{worker.first_name}}</td>
           <td>{{worker.last_name}}</td>
           <td>{{worker.first_name}}</td>
           <td>{{worker.manager_email_address}} </td>
-        </tr>
+          <td>
+                  <li ng-repeat="d in worker.directs" style="background-color:lightgray">
+                  {{d.first_name}} {{d.last_name}}
+                  </li>
+          </tr>
       </table>
       </ul>
+      </font>
 </body>
 </html>

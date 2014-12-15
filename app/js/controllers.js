@@ -47,7 +47,6 @@ ArielApp.controller("ArielCtrl", [ '$scope', '$http', ArielCtrl2] );
             }).error(function(data, status, headers, config) {
                 alert( "failure");
             });
-
         };
 
         $scope.keyboardevent = function(keyEvent) {
