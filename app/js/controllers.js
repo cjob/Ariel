@@ -25,6 +25,12 @@ ArielApp.controller("ArielCtrl", [ '$scope', '$http', ArielCtrl2] );
             $scope.updateworkerlist();
         };
 
+        $scope.clickemailaddress = function (email) {
+            $scope.query = email;
+            $scope.updateworkerlist(null)
+            // $scope.$apply();
+        }; 
+
         $http({
             method : 'GET',
             url : urlstring
