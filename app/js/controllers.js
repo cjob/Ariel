@@ -1,12 +1,9 @@
 
 var ArielApp = angular.module("ArielApp", []);
-
 ArielApp.controller("ArielCtrl", [ '$scope', '$http', ArielCtrl2] );
-
 
     function ArielCtrl2($scope, $http) {
         $scope.query =  "";
-
         urlstring = "http://localhost:3000/v1/Workers?email_address=" + $scope.query;
 
         $scope.updateworkerlist = function() {
@@ -28,7 +25,6 @@ ArielApp.controller("ArielCtrl", [ '$scope', '$http', ArielCtrl2] );
         $scope.clickemailaddress = function (email) {
             $scope.query = email;
             $scope.updateworkerlist(null)
-            // $scope.$apply();
         }; 
 
         $http({
@@ -39,5 +35,4 @@ ArielApp.controller("ArielCtrl", [ '$scope', '$http', ArielCtrl2] );
         }).error(function(data, status, headers, config) {
             alert( "failure");
         });
-
     }

@@ -10,17 +10,13 @@
       <ul class="workers">
       <table border="2" style="background-color:lightgray;border-collapse:collapse;border:2px solid black;color:black;width:100%;" cellpadding="3" cellspacing="3">
         <tr>
-          <td>First name</td>
-          <td>Last Name</td>
-          <td>Email Address</td>
-          <td>Manager Email Address</td>
-          <td>Directs</td>
+          <td>First name</td> <td>Last Name</td><td>Email Address</td><td>Manager Email Address</td><td>Directs</td>
         </tr>
         <tr ng-repeat="worker in Workers" style="background-color:white">
           <td>{{worker.first_name}}</td>
           <td>{{worker.last_name}}</td>
-          <td>{{worker.email_address}}</td>
-          <td>{{worker.manager_email_address}} </td>
+          <td> <a href="" ng-click="clickemailaddress(worker.email_address)"> {{worker.email_address}}</a> </td>
+          <td> <a href="" ng-click="clickemailaddress(worker.manager_email_address)"> {{worker.manager_email_address}}</a> </td>
           <td>
               <li ng-repeat="d in worker.directs" style="background-color:lightgray">
                {{d.first_name}} {{d.last_name}}   <a href="" ng-click="clickemailaddress(d.email_address)"> {{d.email_address}}</a>
